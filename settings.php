@@ -22,13 +22,13 @@ if ($hassiteconfig) {
     // Endpoint.
     $settings->add(new admin_setting_configtext('logstore_xapi/endpoint',
         get_string('endpoint', 'logstore_xapi'), '',
-        'https://cqu-lrs.globalvision.com.au/gvm-logstore-test/xapi/statements/', PARAM_URL));
+        '', PARAM_URL));
     // Username.
     $settings->add(new admin_setting_configtext('logstore_xapi/username',
-        get_string('username', 'logstore_xapi'), '', 'kipvim', PARAM_TEXT));
+        get_string('username', 'logstore_xapi'), '', '', PARAM_TEXT));
     // Key or password.
     $settings->add(new admin_setting_configtext('logstore_xapi/password',
-        get_string('password', 'logstore_xapi'), '', 'kobeeh', PARAM_TEXT));
+        get_string('password', 'logstore_xapi'), '', '', PARAM_TEXT));
 
     // Switch background batch mode on.
     $settings->add(new admin_setting_configcheckbox('logstore_xapi/backgroundmode',
