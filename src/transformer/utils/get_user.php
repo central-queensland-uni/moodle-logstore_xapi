@@ -23,6 +23,7 @@ function get_user(array $config, \stdClass $user) {
     $hasvalidemail = mb_ereg_match("[A-Z0-9\\.\\`\\'_%+-]+@[A-Z0-9.-]+\\.[A-Z]{1,63}$", $user->email, "i");
 
     if (array_key_exists('send_mbox', $config) && $config['send_mbox'] == true && $hasvalidemail) {
+
 		$toReturn = array();
 		
 		if(array_key_exists('hashmbox', $config) && $config['hashmbox'] == true) {
@@ -36,6 +37,7 @@ function get_user(array $config, \stdClass $user) {
 		}
 		
         return $toReturn;
+
     }
 
     if (array_key_exists('send_username', $config) && $config['send_username'] === true) {
