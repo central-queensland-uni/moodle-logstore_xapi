@@ -42,12 +42,7 @@ function all_usertemplates_viewed(array $config, \stdClass $event) {
                 $lang => 'viewed all user templates'
             ],
         ],
-        'object' => utils\get_activity\course_module(
-            $config,
-            $course,
-            $event->contextinstanceid,
-            'http://id.tincanapi.com/activitytype/survey'
-        ),
+        'object' => utils\get_activity\surveypro($config, $event->contextinstanceid),
         'timestamp' => utils\get_event_timestamp($event),
         'context' => [
             'platform' => $config['source_name'],
