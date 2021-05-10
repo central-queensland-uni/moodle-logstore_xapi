@@ -85,6 +85,7 @@ function get_event_function_map() {
         '\mod_surveypro\event\all_submissions_viewed' => 'mod_surveypro\all_submissions_viewed',
         '\mod_surveypro\event\all_usertemplates_viewed' => 'mod_surveypro\all_usertemplates_viewed',
         '\mod_surveypro\event\course_module_instance_list_viewed' => 'mod_surveypro\course_module_instance_list_viewed',
+        '\mod_surveypro\event\course_module_viewed' => 'mod_surveypro\course_module_viewed',
         '\mod_surveypro\event\form_previewed' => 'mod_surveypro\form_previewed',
         '\mod_url\event\course_module_viewed' => 'mod_url\course_module_viewed',
         '\mod_wiki\event\course_module_viewed' => 'all\course_module_viewed',
