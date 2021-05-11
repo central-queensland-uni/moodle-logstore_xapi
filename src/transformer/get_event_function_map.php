@@ -90,6 +90,7 @@ function get_event_function_map() {
         '\mod_surveypro\event\item_created' => 'mod_surveypro\item_created',
         '\mod_surveypro\event\item_deleted' => 'mod_surveypro\item_deleted',
         '\mod_surveypro\event\item_modified' => 'mod_surveypro\item_modified',
+        '\mod_surveypro\event\mastertemplate_applied' => 'mod_surveypro\mastertemplate_applied',
         '\mod_url\event\course_module_viewed' => 'mod_url\course_module_viewed',
         '\mod_wiki\event\course_module_viewed' => 'all\course_module_viewed',
         '\mod_workshop\event\course_module_viewed' => 'all\course_module_viewed',
