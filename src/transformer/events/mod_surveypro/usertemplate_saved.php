@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * xAPI transformer for mod_surveypro user template exported event.
+ * xAPI transformer for mod_surveypro user template saved event.
  *
  * @package   logstore_xapi
  * @copyright 2021 onwards Scott Verbeek <scottverbeek@catalyst-au.net>
@@ -28,7 +28,7 @@
 
 use src\transformer\utils as utils;
 
-function usertemplate_exported(array $config, \stdClass $event) {
+function usertemplate_saved(array $config, \stdClass $event) {
     $repo = $config['repo'];
     $user = $repo->read_record_by_id('user', $event->userid);
     $course = $repo->read_record_by_id('course', $event->courseid);
@@ -37,9 +37,9 @@ function usertemplate_exported(array $config, \stdClass $event) {
     return [[
         'actor' => utils\get_user($config, $user),
         'verb' => [
-            'id' => 'http://id.tincanapi.com/verb/downloaded',
+            'id' => 'http://activitystrea.ms/schema/1.0/save',
             'display' => [
-                $lang => 'downloaded survey user template'
+                $lang => 'saved survey user template'
             ],
         ],
         'object' => utils\get_activity\surveypro_usertemplate($config, $event->objectid, $event->contextinstanceid),

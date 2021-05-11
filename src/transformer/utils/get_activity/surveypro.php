@@ -139,6 +139,6 @@ function surveypro_submission($config, $submissionid, $cmid) {
  */
 function surveypro_usertemplate($config, $submissionid, $cmid) {
     $object = surveypro($config, $cmid);
-    $object['id'] = $config['app_url'].'/mod/surveypro/utemplate_manage.php?id='.$submissionid;
+    $object['id'] = $config['app_url'].'/mod/surveypro/utemplate_manage.php?id='.$cmid;
     return $object;
 }
