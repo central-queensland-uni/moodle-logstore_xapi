@@ -88,6 +88,7 @@ function get_event_function_map() {
         '\mod_surveypro\event\course_module_viewed' => 'mod_surveypro\course_module_viewed',
         '\mod_surveypro\event\form_previewed' => 'mod_surveypro\form_previewed',
         '\mod_surveypro\event\item_created' => 'mod_surveypro\item_created',
+        '\mod_surveypro\event\item_deleted' => 'mod_surveypro\item_deleted',
         '\mod_url\event\course_module_viewed' => 'mod_url\course_module_viewed',
         '\mod_wiki\event\course_module_viewed' => 'all\course_module_viewed',
         '\mod_workshop\event\course_module_viewed' => 'all\course_module_viewed',
