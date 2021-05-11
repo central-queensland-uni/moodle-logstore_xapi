@@ -94,6 +94,7 @@ function get_event_function_map() {
         '\mod_surveypro\event\submission_created' => 'mod_surveypro\submission_created',
         '\mod_surveypro\event\submission_deleted' => 'mod_surveypro\submission_deleted',
         '\mod_surveypro\event\submission_duplicated' => 'mod_surveypro\submission_duplicated',
+        '\mod_surveypro\event\submission_modified' => 'mod_surveypro\submission_modified',
         '\mod_url\event\course_module_viewed' => 'mod_url\course_module_viewed',
         '\mod_wiki\event\course_module_viewed' => 'all\course_module_viewed',
         '\mod_workshop\event\course_module_viewed' => 'all\course_module_viewed',
