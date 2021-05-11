@@ -128,3 +128,17 @@ function surveypro_submission($config, $submissionid, $cmid) {
         ]
     ];
 }
+
+/**
+ * Returns the object element in the xAPI call.
+ *
+ * @param array $config
+ * @param [type] $itemid
+ * @param [type] $cmid
+ * @return void
+ */
+function surveypro_usertemplate($config, $submissionid, $cmid) {
+    $object = surveypro($config, $cmid);
+    $object['id'] = $config['app_url'].'/mod/surveypro/utemplate_manage.php?id='.$submissionid;
+    return $object;
+}
