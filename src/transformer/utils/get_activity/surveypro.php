@@ -70,7 +70,7 @@ function surveypro_item(array $config, $itemid, $cmid) {
     $repo = $config['repo'];
     $xapitype = 'http://id.tincanapi.com/activitytype/survey';
 
-    // If the item doesn't exist return object.
+    // If the item doesn't exist return parent object.
     try {
         $item = $repo->read_record_by_id('surveypro_item', $itemid);
     } catch (\Exception $e) {
@@ -92,5 +92,39 @@ function surveypro_item(array $config, $itemid, $cmid) {
                 $lang => 'Survey item',
             ],
         ],
+    ];
+}
+
+/**
+ * Returns the object element in the xAPI call.
+ *
+ * @param array $config
+ * @param [type] $itemid
+ * @param [type] $cmid
+ * @return void
+ */
+function surveypro_submission($config, $submissionid, $cmid) {
+    $lang = $config['source_lang'];
+    $repo = $config['repo'];
+    $xapitype = 'http://activitystrea.ms/schema/1.0/comment';
+
+    // If the submission doesn't exist return parent object.
+    try {
+        $submission = $repo->read_record_by_id('surveypro_submission', $submissionid);
+    } catch (\Exception $e) {
+        return surveypro($config, $cmid);
+    }
+
+    return [
+        'id' => $config['app_url'].
+                '/mod/surveypro/view_form.php?id='.$cmid.
+                '&submissionid='.$submission->id.
+                '&view=1',
+        'definition' => [
+            'type' => $xapitype,
+            'name' => [
+                $lang => 'Survey submission',
+            ],
+        ]
     ];
 }
