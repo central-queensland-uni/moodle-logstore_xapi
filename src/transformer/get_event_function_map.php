@@ -82,6 +82,7 @@ function get_event_function_map() {
         '\mod_scorm\event\scoreraw_submitted' => 'mod_scorm\scoreraw_submitted',
         '\mod_scorm\event\status_submitted' => 'mod_scorm\status_submitted',
         '\mod_survey\event\course_module_viewed' => 'mod_survey\course_module_viewed',
+        '\mod_surveypro\event\all_items_viewed' => 'mod_surveypro\all_items_viewed',
         '\mod_surveypro\event\all_submissions_viewed' => 'mod_surveypro\all_submissions_viewed',
         '\mod_surveypro\event\all_usertemplates_viewed' => 'mod_surveypro\all_usertemplates_viewed',
         '\mod_surveypro\event\course_module_instance_list_viewed' => 'mod_surveypro\course_module_instance_list_viewed',
