@@ -51,3 +51,35 @@ function spa_category(array $config, $categoryid)
 
     return $object;
 }
+
+/**
+ * Returns the object element in the xAPI call.
+ *
+ * @param array $config
+ * @param int $questionid
+ * @return array
+ */
+function spa_question(array $config, $questionid)
+{
+    $lang = $config['source_lang'];
+    $repo = $config['repo'];
+    $xapitype = 'http://activitystrea.ms/schema/1.0/question';
+
+    $question = $repo->read_record_by_id('spa_question', $questionid);
+
+    // If the question exists in the database use it's name as instance name, otherwise just use SPA question.
+    $instancename = ($question !== null) ? $question->name : 'SPA question';
+    $questionurl = $config['app_url'].'/mod/spa/editquestion.php?id='.$questionid;
+
+    $object = [
+        'id' => $questionurl,
+        'definition' => [
+            'type' => $xapitype,
+            'name' => [
+                $lang => $instancename,
+            ],
+        ],
+    ];
+
+    return $object;
+}
