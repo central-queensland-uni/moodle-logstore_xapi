@@ -81,6 +81,7 @@ function get_event_function_map() {
         '\mod_scorm\event\sco_launched' => 'mod_scorm\sco_launched',
         '\mod_scorm\event\scoreraw_submitted' => 'mod_scorm\scoreraw_submitted',
         '\mod_scorm\event\status_submitted' => 'mod_scorm\status_submitted',
+        '\mod_spa\event\category_created' => 'mod_spa\category_created',
         '\mod_survey\event\course_module_viewed' => 'mod_survey\course_module_viewed',
         '\mod_url\event\course_module_viewed' => 'mod_url\course_module_viewed',
         '\mod_wiki\event\course_module_viewed' => 'all\course_module_viewed',
