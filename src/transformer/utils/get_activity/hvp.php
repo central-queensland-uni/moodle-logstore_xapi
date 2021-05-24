@@ -57,3 +57,28 @@ function hvp(array $config, $cmid) {
     return $object;
 }
 
+/**
+ * Return the object element in the xAPI call.
+ *
+ * @param array $config
+ * @param int $courseid
+ * @return array $object
+ */
+function hvp_instance_list(array $config, $courseid)
+{
+    $lang = $config['source_lang'];
+    $xapitype = 'http://adlnet.gov/expapi/activities/module';
+
+    $instancelisturl = $config['app_url'].'/mod/hvp/index.php?id='.$courseid;
+    $instancename = 'H5P';
+
+    return [
+        'id' => $instancelisturl,
+        'definition' => [
+            'type' => $xapitype,
+            'name' => [
+                $lang => $instancename,
+            ],
+        ],
+    ];
+}
