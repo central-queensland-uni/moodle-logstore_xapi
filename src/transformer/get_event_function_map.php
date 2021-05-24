@@ -56,6 +56,7 @@ function get_event_function_map() {
         '\mod_choicegroup\event\choice_updated' => 'mod_choicegroup\choice_updated',
         '\mod_choicegroup\event\course_module_instance_list_viewed' => 'mod_choicegroup\course_module_instance_list_viewed',
         '\mod_choicegroup\event\course_module_viewed' => 'mod_choicegroup\course_module_viewed',
+        '\mod_choicegroup\event\report_viewed' => 'mod_choicegroup\report_viewed',
         '\mod_data\event\course_module_viewed' => 'all\course_module_viewed',
         '\mod_facetoface\event\cancel_booking' => 'mod_facetoface\cancel_booking',
         '\mod_facetoface\event\course_module_viewed' => 'mod_facetoface\course_module_viewed',
