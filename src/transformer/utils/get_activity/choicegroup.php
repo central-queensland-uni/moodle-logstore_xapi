@@ -56,3 +56,30 @@ function choicegroup(array $config, $cmid) {
 
     return $object;
 }
+
+/**
+ * Return the object element in the xAPI call.
+ *
+ * @param array $config
+ * @param int $courseid
+ * @return array $object
+ */
+function choicegroup_instance_list(array $config, $courseid)
+{
+    $lang = $config['source_lang'];
+    $xapitype = 'http://activitystrea.ms/schema/1.0/collection';
+
+    $instancelisturl = $config['app_url'].'/mod/choicegroup/index.php?id='.$courseid;
+    $instancename = 'choicegroup';
+
+    return [
+        'id' => $instancelisturl,
+        'definition' => [
+            'type' => $xapitype,
+            'name' => [
+                $lang => $instancename,
+            ],
+        ],
+    ];
+}
+
