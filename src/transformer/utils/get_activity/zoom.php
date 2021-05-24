@@ -56,3 +56,29 @@ function zoom(array $config, $cmid) {
 
     return $object;
 }
+
+/**
+ * Return the object element in the xAPI call.
+ *
+ * @param array $config
+ * @param int $courseid
+ * @return array $object
+ */
+function zoom_instance_list(array $config, $courseid)
+{
+    $lang = $config['source_lang'];
+    $xapitype = 'http://adlnet.gov/expapi/activities/meeting';
+
+    $instancelisturl = $config['app_url'].'/mod/zoom/index.php?id='.$courseid;
+    $instancename = 'Zoom';
+
+    return [
+        'id' => $instancelisturl,
+        'definition' => [
+            'type' => $xapitype,
+            'name' => [
+                $lang => $instancename,
+            ],
+        ],
+    ];
+}
