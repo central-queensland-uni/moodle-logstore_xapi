@@ -19,6 +19,44 @@ defined('MOODLE_INTERNAL') || die();
 
 use src\transformer\utils as utils;
 
+/**
+ * Returns the object element in the xAPI call.
+ *
+ * @param array $config
+ * @param int $cmid
+ * @return array
+ */
+function spa(array $config, $cmid)
+{
+    $lang = $config['source_lang'];
+    $repo = $config['repo'];
+    $xapitype = 'http://activitystrea.ms/schema/1.0/review';
+
+    $coursemodule = $repo->read_record_by_id('course_modules', $cmid);
+    $module = $repo->read_record_by_id('modules', $coursemodule->module);
+    $instance = $repo->read_record_by_id($module->name, $coursemodule->instance);
+
+    $coursemoduleurl = $config['app_url'].'/mod/'.$module->name.'/view.php?id='.$cmid;
+    $instancename = property_exists($instance, 'name') ? $instance->name : $module->name;
+
+    $object = [
+        'id' => $coursemoduleurl,
+        'definition' => [
+            'type' => $xapitype,
+            'name' => [
+                $lang => $instancename,
+            ],
+        ],
+    ];
+
+    if (utils\is_enabled_config($config, 'send_course_and_module_idnumber')) {
+        $moduleidnumber = property_exists($coursemodule, 'idnumber') ? $coursemodule->idnumber : null;
+        $object['definition']['extensions']['https://w3id.org/learning-analytics/learning-management-system/external-id'] =
+            $moduleidnumber;
+    }
+
+    return $object;
+}
 
 /**
  * Returns the object element in the xAPI call.
