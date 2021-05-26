@@ -135,3 +135,30 @@ function spa_question(array $config, $questionid)
 
     return $object;
 }
+
+/**
+ * Returns the object element in the xAPI call.
+ *
+ * @param array $config
+ * @param int $cmid
+ * @param int $relateduserid
+ * @return array
+ */
+function spa_submission(array $config, $cmid, $relateduserid)
+{
+    $lang = $config['source_lang'];
+    $xapitype = 'http://adlnet.gov/expapi/activities/interaction';
+
+    $instancename = 'SPA Submission';
+    $submissionurl = $config['app_url'].'/mod/spa/review.php?cmid='.$cmid.'&id='.$relateduserid;
+
+    return [
+        'id' => $submissionurl,
+        'definition' => [
+            'type' => $xapitype,
+            'name' => [
+                $lang => $instancename,
+            ],
+        ]
+    ];
+}
