@@ -82,6 +82,7 @@ function get_event_function_map() {
         '\mod_scorm\event\scoreraw_submitted' => 'mod_scorm\scoreraw_submitted',
         '\mod_scorm\event\status_submitted' => 'mod_scorm\status_submitted',
         '\mod_spa\event\category_created' => 'mod_spa\category_created',
+        '\mod_spa\event\category_deleted' => 'mod_spa\category_deleted',
         '\mod_spa\event\category_viewed' => 'mod_spa\category_viewed',
         '\mod_spa\event\category_updated' => 'mod_spa\category_updated',
         '\mod_spa\event\course_module_viewed' => 'mod_spa\course_module_viewed',
