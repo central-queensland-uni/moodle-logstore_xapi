@@ -192,3 +192,18 @@ function spa_template(array $config, $templateid)
         ],
     ];
 }
+
+/**
+ * Returns the object element in the xAPI call.
+ *
+ * @param array $config
+ * @param int $cmid
+ * @param int $relateduserid
+ * @return array
+ */
+function spa_template_questions(array $config, $templateid)
+{
+    $object = spa_template($config, $templateid);
+    $object['id'] = $config['app_url'].'/mod/spa/questionslots.php?template='.$templateid;
+    return $object;
+}
