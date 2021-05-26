@@ -94,6 +94,7 @@ function get_event_function_map() {
         '\mod_spa\event\submission_viewed' => 'mod_spa\submission_viewed',
         '\mod_spa\event\template_created' => 'mod_spa\template_created',
         '\mod_spa\event\template_deleted' => 'mod_spa\template_deleted',
+        '\mod_spa\event\template_updated' => 'mod_spa\template_updated',
         '\mod_survey\event\course_module_viewed' => 'mod_survey\course_module_viewed',
         '\mod_url\event\course_module_viewed' => 'mod_url\course_module_viewed',
         '\mod_wiki\event\course_module_viewed' => 'all\course_module_viewed',
