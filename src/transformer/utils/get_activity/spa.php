@@ -94,6 +94,20 @@ function spa_category(array $config, $categoryid)
  * Returns the object element in the xAPI call.
  *
  * @param array $config
+ * @param int $cmid
+ * @return array
+ */
+function spa_edit(array $config, $cmid)
+{
+    $object = spa($config, $cmid);
+    $object['id'] = $config['app_url'].'/mod/spa/questionslots.php?id='.$cmid;
+    return $object;
+}
+
+/**
+ * Returns the object element in the xAPI call.
+ *
+ * @param array $config
  * @param int $questionid
  * @return array
  */
