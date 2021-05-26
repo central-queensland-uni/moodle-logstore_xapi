@@ -233,3 +233,29 @@ function spa_template_questions(array $config, $templateid)
     $object['id'] = $config['app_url'].'/mod/spa/questionslots.php?template='.$templateid;
     return $object;
 }
+
+/**
+ * Returns the object element in the xAPI call.
+ *
+ * @param array $config
+ * @param int $cmid
+ * @param int $relateduserid
+ * @return array
+ */
+function spa_user_override(array $config, $overrideid)
+{
+    $lang = $config['source_lang'];
+    $xapitype = 'http://id.tincanapi.com/activitytype/source';
+
+    $templateurl = $config['app_url'].'/mod/spa/overrideedit.php?id='.$overrideid;
+
+    return [
+        'id' => $templateurl,
+        'definition' => [
+            'type' => $xapitype,
+            'name' => [
+                $lang => 'SPA User override',
+            ],
+        ],
+    ];
+}
