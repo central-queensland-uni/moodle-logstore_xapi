@@ -162,3 +162,33 @@ function spa_submission(array $config, $cmid, $relateduserid)
         ]
     ];
 }
+
+/**
+ * Returns the object element in the xAPI call.
+ *
+ * @param array $config
+ * @param int $cmid
+ * @param int $relateduserid
+ * @return array
+ */
+function spa_template(array $config, $templateid)
+{
+    $lang = $config['source_lang'];
+    $repo = $config['repo'];
+    $xapitype = 'http://id.tincanapi.com/activitytype/source';
+
+    $instance = $repo->read_record_by_id('spa_template', $templateid);
+
+    $templateurl = $config['app_url'].'/mod/spa/edittemplate.php?id='.$templateid;
+    $instancename = property_exists($instance, 'name') ? $instance->name : 'SPA Template';
+
+    return [
+        'id' => $templateurl,
+        'definition' => [
+            'type' => $xapitype,
+            'name' => [
+                $lang => $instancename,
+            ],
+        ],
+    ];
+}
