@@ -75,7 +75,7 @@ function spa_category(array $config, $categoryid)
 
     // If the category exists in the database use it's name as instance name, otherwise just use SPA category.
     $instancename = ($category !== null) ? $category->name : 'SPA category';
-    $categoryurl = $config['app_url'].'/mod/spa/editcategory.php?id='.$categoryid;
+    $categoryurl = $config['app_url'].'/mod/spa/question.php?category='.$categoryid;
 
     $object = [
         'id' => $categoryurl,
