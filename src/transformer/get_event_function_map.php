@@ -89,6 +89,7 @@ function get_event_function_map() {
         '\mod_spa\event\edit_page_viewed' => 'mod_spa\edit_page_viewed',
         '\mod_spa\event\group_override_created' => 'mod_spa\group_override_created',
         '\mod_spa\event\group_override_updated' => 'mod_spa\group_override_updated',
+        '\mod_spa\event\group_override_deleted' => 'mod_spa\group_override_deleted',
         '\mod_spa\event\question_created' => 'mod_spa\question_created',
         '\mod_spa\event\question_previewed' => 'mod_spa\question_previewed',
         '\mod_spa\event\question_updated' => 'mod_spa\question_updated',
