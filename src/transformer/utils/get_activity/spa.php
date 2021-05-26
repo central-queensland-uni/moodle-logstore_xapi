@@ -238,6 +238,31 @@ function spa_template_questions(array $config, $templateid)
  * Returns the object element in the xAPI call.
  *
  * @param array $config
+ * @param int $overrideid
+ * @return array
+ */
+function spa_group_override(array $config, $overrideid)
+{
+    $lang = $config['source_lang'];
+    $xapitype = 'http://id.tincanapi.com/activitytype/source';
+
+    $templateurl = $config['app_url'].'/mod/spa/overrideedit.php?id='.$overrideid;
+
+    return [
+        'id' => $templateurl,
+        'definition' => [
+            'type' => $xapitype,
+            'name' => [
+                $lang => 'SPA Group override',
+            ],
+        ],
+    ];
+}
+
+/**
+ * Returns the object element in the xAPI call.
+ *
+ * @param array $config
  * @param int $cmid
  * @param int $relateduserid
  * @return array
