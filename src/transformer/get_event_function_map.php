@@ -99,6 +99,7 @@ function get_event_function_map() {
         '\mod_spa\event\template_created' => 'mod_spa\template_created',
         '\mod_spa\event\template_deleted' => 'mod_spa\template_deleted',
         '\mod_spa\event\template_updated' => 'mod_spa\template_updated',
+        '\mod_spa\event\template_viewed' => 'mod_spa\template_viewed',
         '\mod_spa\event\template_questions_added' => 'mod_spa\template_questions_added',
         '\mod_spa\event\template_questions_viewed' => 'mod_spa\template_questions_viewed',
         '\mod_survey\event\course_module_viewed' => 'mod_survey\course_module_viewed',
