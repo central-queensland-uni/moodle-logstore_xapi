@@ -85,6 +85,7 @@ function get_event_function_map() {
         '\mod_spa\event\course_module_viewed' => 'mod_spa\course_module_viewed',
         '\mod_spa\event\edit_page_viewed' => 'mod_spa\edit_page_viewed',
         '\mod_spa\event\question_created' => 'mod_spa\question_created',
+        '\mod_spa\event\question_previewed' => 'mod_spa\question_previewed',
         '\mod_spa\event\question_viewed' => 'mod_spa\question_viewed',
         '\mod_survey\event\course_module_viewed' => 'mod_survey\course_module_viewed',
         '\mod_url\event\course_module_viewed' => 'mod_url\course_module_viewed',
