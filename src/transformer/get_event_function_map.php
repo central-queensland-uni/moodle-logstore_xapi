@@ -89,6 +89,7 @@ function get_event_function_map() {
         '\mod_spa\event\course_module_viewed' => 'mod_spa\course_module_viewed',
         '\mod_spa\event\edit_page_viewed' => 'mod_spa\edit_page_viewed',
         '\mod_spa\event\emails_sent' => 'mod_spa\emails_sent',
+        '\mod_spa\event\email_template_updated' => 'mod_spa\email_template_updated',
         '\mod_spa\event\formative_feedback_viewed' => 'mod_spa\formative_feedback_viewed',
         '\mod_spa\event\group_override_created' => 'mod_spa\group_override_created',
         '\mod_spa\event\group_override_updated' => 'mod_spa\group_override_updated',
