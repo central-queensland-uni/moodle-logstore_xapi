@@ -95,6 +95,7 @@ function get_event_function_map() {
         '\mod_spa\event\question_previewed' => 'mod_spa\question_previewed',
         '\mod_spa\event\question_updated' => 'mod_spa\question_updated',
         '\mod_spa\event\question_viewed' => 'mod_spa\question_viewed',
+        '\mod_spa\event\report_viewed' => 'mod_spa\report_viewed',
         '\mod_spa\event\submission_created' => 'mod_spa\submission_created',
         '\mod_spa\event\submission_deleted' => 'mod_spa\submission_deleted',
         '\mod_spa\event\submission_reviewed' => 'mod_spa\submission_reviewed',

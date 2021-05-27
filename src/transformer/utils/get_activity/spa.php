@@ -167,6 +167,38 @@ function spa_question(array $config, $questionid)
  *
  * @param array $config
  * @param int $cmid
+ * @param string $reporttype
+ * @return array
+ */
+function spa_report(array $config, $cmid, $reporttype)
+{
+    $lang = $config['source_lang'];
+    $repo = $config['repo'];
+    $xapitype = 'http://activitystrea.ms/schema/1.0/page';
+
+    $coursemodule = $repo->read_record_by_id('course_modules', $cmid);
+    $module = $repo->read_record_by_id('modules', $coursemodule->module);
+    $instance = $repo->read_record_by_id($module->name, $coursemodule->instance);
+
+    $instancename = property_exists($instance, 'name') ? $instance->name : $module->name;
+    $reporturl = $config['app_url'].'/mod/spa/report.php?id='.$cmid.'&type='.$reporttype;
+
+    return [
+        'id' => $reporturl,
+        'definition' => [
+            'type' => $xapitype,
+            'name' => [
+                $lang => $instancename,
+            ],
+        ],
+    ];
+}
+
+/**
+ * Returns the object element in the xAPI call.
+ *
+ * @param array $config
+ * @param int $cmid
  * @param int $relateduserid
  * @return array
  */
