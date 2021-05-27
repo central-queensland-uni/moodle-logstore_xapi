@@ -57,3 +57,29 @@ function oublog(array $config, $cmid)
 
     return $object;
 }
+
+/**
+ * Return the object element in the xAPI call.
+ *
+ * @param array $config
+ * @param int $courseid
+ * @return array $object
+ */
+function oublog_instance_list(array $config, $courseid)
+{
+    $lang = $config['source_lang'];
+    $xapitype = 'http://id.tincanapi.com/activitytype/blog';
+
+    $instancelisturl = $config['app_url'].'/mod/oublog/index.php?id='.$courseid;
+    $instancename = 'oublog';
+
+    return [
+        'id' => $instancelisturl,
+        'definition' => [
+            'type' => $xapitype,
+            'name' => [
+                $lang => $instancename,
+            ],
+        ],
+    ];
+}
