@@ -255,6 +255,32 @@ function spa_teacher_feedback(array $config, $cmid, $relateduserid)
  * @param int $relateduserid
  * @return array
  */
+function spa_teacher_feedback_viewed(array $config, $cmid)
+{
+    $lang = $config['source_lang'];
+    $xapitype = 'http://activitystrea.ms/schema/1.0/review';
+
+    $feedbackurl = $config['app_url'].'/mod/spa/feedback.php?cmid='.$cmid;
+
+    return [
+        'id' => $feedbackurl,
+        'definition' => [
+            'type' => $xapitype,
+            'name' => [
+                $lang => 'SPA teacher feedback',
+            ],
+        ],
+    ];
+}
+
+/**
+ * Returns the object element in the xAPI call.
+ *
+ * @param array $config
+ * @param int $cmid
+ * @param int $relateduserid
+ * @return array
+ */
 function spa_template(array $config, $templateid)
 {
     $lang = $config['source_lang'];
