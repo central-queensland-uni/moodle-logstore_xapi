@@ -351,6 +351,32 @@ function spa_group_override(array $config, $overrideid)
  * @param int $relateduserid
  * @return array
  */
+function spa_review(array $config, $cmid, $relateduserid)
+{
+    $lang = $config['source_lang'];
+    $xapitype = 'http://activitystrea.ms/schema/1.0/review';
+
+    $templateurl = $config['app_url'].'/mod/spa/review.php?cmid='.$cmid.'&userid='.$relateduserid;
+
+    return [
+        'id' => $templateurl,
+        'definition' => [
+            'type' => $xapitype,
+            'name' => [
+                $lang => 'SPA user review',
+            ],
+        ],
+    ];
+}
+
+/**
+ * Returns the object element in the xAPI call.
+ *
+ * @param array $config
+ * @param int $cmid
+ * @param int $relateduserid
+ * @return array
+ */
 function spa_user_override(array $config, $overrideid)
 {
     $lang = $config['source_lang'];

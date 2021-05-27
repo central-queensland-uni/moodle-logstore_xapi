@@ -116,6 +116,7 @@ function get_event_function_map() {
         '\mod_spa\event\template_questions_moved' => 'mod_spa\template_questions_moved',
         '\mod_spa\event\template_questions_removed' => 'mod_spa\template_questions_removed',
         '\mod_spa\event\template_questions_viewed' => 'mod_spa\template_questions_viewed',
+        '\mod_spa\event\user_graded' => 'mod_spa\user_graded',
         '\mod_spa\event\user_override_created' => 'mod_spa\user_override_created',
         '\mod_spa\event\user_override_deleted' => 'mod_spa\user_override_deleted',
         '\mod_spa\event\user_override_updated' => 'mod_spa\user_override_updated',
