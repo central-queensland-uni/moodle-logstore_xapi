@@ -85,6 +85,7 @@ function get_event_function_map() {
         '\mod_spa\event\category_deleted' => 'mod_spa\category_deleted',
         '\mod_spa\event\category_viewed' => 'mod_spa\category_viewed',
         '\mod_spa\event\category_updated' => 'mod_spa\category_updated',
+        '\mod_spa\event\course_module_instance_list_viewed' => 'mod_spa\course_module_instance_list_viewed',
         '\mod_spa\event\course_module_viewed' => 'mod_spa\course_module_viewed',
         '\mod_spa\event\edit_page_viewed' => 'mod_spa\edit_page_viewed',
         '\mod_spa\event\group_override_created' => 'mod_spa\group_override_created',

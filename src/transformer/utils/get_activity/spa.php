@@ -91,6 +91,32 @@ function spa_category(array $config, $categoryid)
 }
 
 /**
+ * Return the object element in the xAPI call.
+ *
+ * @param array $config
+ * @param int $courseid
+ * @return array $object
+ */
+function spa_instance_list(array $config, $courseid)
+{
+    $lang = $config['source_lang'];
+    $xapitype = 'http://adlnet.gov/expapi/activities/meeting';
+
+    $instancelisturl = $config['app_url'].'/mod/spa/index.php?id='.$courseid;
+    $instancename = 'SPA';
+
+    return [
+        'id' => $instancelisturl,
+        'definition' => [
+            'type' => $xapitype,
+            'name' => [
+                $lang => $instancename,
+            ],
+        ],
+    ];
+}
+
+/**
  * Returns the object element in the xAPI call.
  *
  * @param array $config
