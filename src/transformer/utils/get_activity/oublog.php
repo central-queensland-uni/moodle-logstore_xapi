@@ -125,6 +125,21 @@ function oublog_instance_list(array $config, $courseid)
  * Return the object element in the xAPI call.
  *
  * @param array $config
+ * @param string $logurl
+ * @param int $cmid
+ * @return array $object
+ */
+function oublog_participation(array $config, $logurl, $cmid)
+{
+    $object = oublog($config, $cmid);
+    $object['id'] = $config['app_url'].'/mod/oublog/'.$logurl;
+    return $object;
+}
+
+/**
+ * Return the object element in the xAPI call.
+ *
+ * @param array $config
  * @param int $postid
  * @return array $object
  */
