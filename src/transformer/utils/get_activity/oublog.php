@@ -83,3 +83,32 @@ function oublog_instance_list(array $config, $courseid)
         ],
     ];
 }
+
+/**
+ * Return the object element in the xAPI call.
+ *
+ * @param array $config
+ * @param int $postid
+ * @return array $object
+ */
+function oublog_post(array $config, $postid)
+{
+    $lang = $config['source_lang'];
+    $repo = $config['repo'];
+    $xapitype = 'http://activitystrea.ms/schema/1.0/article';
+
+    $instance = $repo->read_by_record_id('oublog_posts', $postid);
+
+    $instancelisturl = $config['app_url'].'/mod/spa/viewpost.php?post='.$postid;
+    $instancename = property_exists($instance, 'title') ? $instance->title : 'oublog post';
+
+    return [
+        'id' => $instancelisturl,
+        'definition' => [
+            'type' => $xapitype,
+            'name' => [
+                $lang => $instancename,
+            ],
+        ],
+    ];
+}
