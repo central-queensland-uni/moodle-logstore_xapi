@@ -164,3 +164,29 @@ function oublog_post(array $config, $postid)
         ],
     ];
 }
+
+/**
+ * Return the object element in the xAPI call.
+ *
+ * @param array $config
+ * @param int $pageid
+ * @return array $object
+ */
+function oublog_site_entries(array $config, $pageid)
+{
+    $lang = $config['source_lang'];
+    $xapitype = 'http://activitystrea.ms/schema/1.0/page';
+
+    $instancelisturl = $config['app_url'].'/mod/oublog/allposts.php?pageid='.$pageid;
+    $instancename = 'oublog site entries';
+
+    return [
+        'id' => $instancelisturl,
+        'definition' => [
+            'type' => $xapitype,
+            'name' => [
+                $lang => $instancename,
+            ],
+        ],
+    ];
+}
