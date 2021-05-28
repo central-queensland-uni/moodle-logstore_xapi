@@ -62,6 +62,43 @@ function oublog(array $config, $cmid)
  * Return the object element in the xAPI call.
  *
  * @param array $config
+ * @param int $commentid
+ * @param int $postid
+ * @return array $object
+ */
+function oublog_comment(array $config, $commentid, $postid)
+{
+    $lang = $config['source_lang'];
+    $repo = $config['repo'];
+    $xapitype = 'http://activitystrea.ms/schema/1.0/comment';
+
+    $instance = $repo->read_by_record_id('oublog_comments', $commentid);
+
+    $instancelisturl = $config['app_url'].'/mod/spa/viewpost.php?post='.$postid;
+    if(property_exists($instance, 'title') && trim($instance->title) !== '') {
+        $instancename = $instance->title;
+    } else {
+        $instancename = 'oublog comment';
+    }
+
+    $instancelisturl = $config['app_url'].'/mod/oublog/viewpost.php?post='.$postid;
+
+    return [
+        'id' => $instancelisturl,
+        'definition' => [
+            'type' => $xapitype,
+            'name' => [
+                $lang => $instancename,
+            ],
+        ],
+        'inReplyTo' => array(oublog_post($config, $postid)),
+    ];
+}
+
+/**
+ * Return the object element in the xAPI call.
+ *
+ * @param array $config
  * @param int $courseid
  * @return array $object
  */
