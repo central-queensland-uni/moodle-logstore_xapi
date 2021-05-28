@@ -74,6 +74,7 @@ function get_event_function_map() {
         '\mod_oublog\event\post_created' => 'mod_oublog\post_created',
         '\mod_oublog\event\post_deleted' => 'mod_oublog\post_deleted',
         '\mod_oublog\event\post_imported' => 'mod_oublog\post_imported',
+        '\mod_oublog\event\post_updated' => 'mod_oublog\post_updated',
         '\mod_page\event\course_module_viewed' => 'mod_page\course_module_viewed',
         '\mod_quiz\event\course_module_viewed' => 'mod_quiz\course_module_viewed',
         '\mod_quiz\event\attempt_abandoned' => 'mod_quiz\attempt_submitted\handler',
