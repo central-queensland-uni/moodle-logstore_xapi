@@ -71,6 +71,7 @@ function get_event_function_map() {
         '\mod_lti\event\course_module_viewed' => 'all\course_module_viewed',
         '\mod_oublog\event\comment_approved' => 'mod_oublog\comment_approved',
         '\mod_oublog\event\comment_created' => 'mod_oublog\comment_created',
+        '\mod_oublog\event\comment_deleted' => 'mod_oublog\comment_deleted',
         '\mod_oublog\event\course_module_instance_list_viewed' => 'mod_oublog\course_module_instance_list_viewed',
         '\mod_oublog\event\course_module_viewed' => 'mod_oublog\course_module_viewed',
         '\mod_oublog\event\post_created' => 'mod_oublog\post_created',
