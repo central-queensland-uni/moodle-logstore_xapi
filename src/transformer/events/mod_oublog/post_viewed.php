@@ -39,7 +39,7 @@ function post_viewed(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://id.tincanapi.com/verb/viewed',
             'display' => [
-                $lang => 'viewed oublog post'
+                $lang => 'viewed'
             ],
         ],
         'object' => utils\get_activity\oublog_post($config, $event->objectid),

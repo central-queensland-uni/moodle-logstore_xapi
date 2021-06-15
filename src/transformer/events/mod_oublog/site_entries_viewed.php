@@ -38,7 +38,7 @@ function site_entries_viewed(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://id.tincanapi.com/verb/viewed',
             'display' => [
-                $lang => 'viewed oublog site entries'
+                $lang => 'viewed'
             ],
         ],
         'object' => utils\get_activity\oublog_site_entries($config, $event->other['pageid']),

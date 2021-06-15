@@ -39,7 +39,7 @@ function post_imported(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://adlnet.gov/expapi/verbs/imported',
             'display' => [
-                $lang => 'imported oublog post'
+                $lang => 'imported'
             ],
         ],
         'object' => utils\get_activity\oublog_post($config, $event->objectid),

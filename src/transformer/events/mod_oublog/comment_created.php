@@ -39,7 +39,7 @@ function comment_created(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/create',
             'display' => [
-                $lang => 'created oublog comment'
+                $lang => 'created'
             ],
         ],
         'object' => utils\get_activity\oublog_comment($config, $event->objectid, $event->other['postid']),

@@ -39,7 +39,7 @@ function participation_viewed(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://id.tincanapi.com/verb/viewed',
             'display' => [
-                $lang => 'viewed oublog participation'
+                $lang => 'viewed'
             ],
         ],
         'object' => utils\get_activity\oublog_participation($config, $event->other['logurl'], $event->contextinstanceid),

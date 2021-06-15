@@ -39,7 +39,7 @@ function post_created(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/create',
             'display' => [
-                $lang => 'created oublog post'
+                $lang => 'created'
             ],
         ],
         'object' => utils\get_activity\oublog_post($config, $event->objectid),

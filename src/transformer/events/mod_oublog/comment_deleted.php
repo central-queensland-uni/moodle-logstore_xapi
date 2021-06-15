@@ -39,7 +39,7 @@ function comment_deleted(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/delete',
             'display' => [
-                $lang => 'deleted oublog comment'
+                $lang => 'deleted'
             ],
         ],
         'object' => utils\get_activity\oublog_comment($config, $event->objectid, $event->other['postid']),

@@ -39,7 +39,7 @@ function comment_approved(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/approve',
             'display' => [
-                $lang => 'approved oublog comment'
+                $lang => 'approved'
             ],
         ],
         'object' => utils\get_activity\oublog_comment($config, $event->objectid, $event->other['postid']),
