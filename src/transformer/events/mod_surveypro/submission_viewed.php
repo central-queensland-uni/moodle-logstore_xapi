@@ -39,7 +39,7 @@ function submission_viewed(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://id.tincanapi.com/verb/viewed',
             'display' => [
-                $lang => 'viewed comment on survey'
+                $lang => 'viewed'
             ],
         ],
         'object' => utils\get_activity\surveypro_submission($config, $event->objectid, $event->contextinstanceid),

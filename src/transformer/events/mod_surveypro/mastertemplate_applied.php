@@ -39,7 +39,7 @@ function mastertemplate_applied(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://id.tincanapi.com/verb/viewed',
             'display' => [
-                $lang => 'applied master template'
+                $lang => 'applied'
             ],
         ],
         'object' => utils\get_activity\surveypro($config, $event->contextinstanceid),

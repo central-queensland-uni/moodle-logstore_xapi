@@ -39,7 +39,7 @@ function submission_duplicated(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://adlnet.gov/expapi/verbs/commented',
             'display' => [
-                $lang => 'duplicated comment on survey'
+                $lang => 'commented'
             ],
         ],
         'object' => utils\get_activity\surveypro_submission($config, $event->objectid, $event->contextinstanceid),

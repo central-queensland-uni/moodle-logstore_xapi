@@ -39,7 +39,7 @@ function item_deleted(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/delete',
             'display' => [
-                $lang => "deleted survey item"
+                $lang => "deleted"
             ],
         ],
         'object' => utils\get_activity\surveypro_item($config, $event->objectid, $event->contextinstanceid),

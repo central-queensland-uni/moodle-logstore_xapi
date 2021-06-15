@@ -39,7 +39,7 @@ function item_modified(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/update',
             'display' => [
-                $lang => "modified survey item"
+                $lang => "modified"
             ],
         ],
         'object' => utils\get_activity\surveypro_item($config, $event->objectid, $event->contextinstanceid),

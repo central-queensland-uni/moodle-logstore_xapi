@@ -39,7 +39,7 @@ function submission_deleted(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/delete',
             'display' => [
-                $lang => 'deleted comment on survey'
+                $lang => 'deleted'
             ],
         ],
         'object' => utils\get_activity\surveypro_submission($config, $event->objectid, $event->contextinstanceid),

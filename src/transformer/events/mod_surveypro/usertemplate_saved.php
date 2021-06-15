@@ -39,7 +39,7 @@ function usertemplate_saved(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/save',
             'display' => [
-                $lang => 'saved survey user template'
+                $lang => 'saved'
             ],
         ],
         'object' => utils\get_activity\surveypro_usertemplate($config, $event->objectid, $event->contextinstanceid),

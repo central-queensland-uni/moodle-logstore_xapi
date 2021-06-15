@@ -39,7 +39,7 @@ function submissioninpdf_downloaded(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://id.tincanapi.com/verb/downloaded',
             'display' => [
-                $lang => 'downloaded comment on survey'
+                $lang => 'downloaded'
             ],
         ],
         'object' => utils\get_activity\surveypro_submission($config, $event->objectid, $event->contextinstanceid),

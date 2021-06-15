@@ -39,7 +39,7 @@ function item_created(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/create',
             'display' => [
-                $lang => "created survey item"
+                $lang => "created"
             ],
         ],
         'object' => utils\get_activity\surveypro_item($config, $event->objectid, $event->contextinstanceid),

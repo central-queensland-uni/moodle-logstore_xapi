@@ -39,7 +39,7 @@ function all_items_viewed(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://id.tincanapi.com/verb/viewed',
             'display' => [
-                $lang => 'viewed all survey items'
+                $lang => 'viewed'
             ],
         ],
         'object' => utils\get_activity\surveypro($config, $event->contextinstanceid),

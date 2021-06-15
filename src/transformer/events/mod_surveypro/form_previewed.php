@@ -39,7 +39,7 @@ function form_previewed(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://id.tincanapi.com/verb/previewed',
             'display' => [
-                $lang => 'previewed form'
+                $lang => 'previewed'
             ],
         ],
         'object' => utils\get_activity\surveypro($config, $event->contextinstanceid),

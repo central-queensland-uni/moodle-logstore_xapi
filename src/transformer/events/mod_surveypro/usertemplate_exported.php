@@ -39,7 +39,7 @@ function usertemplate_exported(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://id.tincanapi.com/verb/downloaded',
             'display' => [
-                $lang => 'downloaded survey user template'
+                $lang => 'downloaded'
             ],
         ],
         'object' => utils\get_activity\surveypro_usertemplate($config, $event->objectid, $event->contextinstanceid),
