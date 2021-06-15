@@ -39,7 +39,7 @@ function join_meeting_button_clicked(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/join',
             'display' => [
-                $lang => 'joined Zoom meeting'
+                $lang => 'joined'
             ],
         ],
         'object' => utils\get_activity\zoom($config, $event->contextinstanceid),

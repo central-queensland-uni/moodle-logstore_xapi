@@ -39,7 +39,7 @@ function course_module_instance_list_viewed(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://id.tincanapi.com/verb/viewed',
             'display' => [
-                $lang => 'viewed Zoom instances'
+                $lang => 'viewed'
             ],
         ],
         'object' => utils\get_activity\zoom_instance_list($config, $event->courseid),
