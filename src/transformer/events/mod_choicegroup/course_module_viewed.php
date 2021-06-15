@@ -39,7 +39,7 @@ function report_viewed(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://id.tincanapi.com/verb/viewed',
             'display' => [
-                $lang => 'viewed choice group'
+                $lang => 'viewed'
             ],
         ],
         'object' => utils\get_activity\choicegroup($config, $event->contextinstanceid),

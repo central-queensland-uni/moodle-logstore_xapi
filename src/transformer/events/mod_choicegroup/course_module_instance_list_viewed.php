@@ -39,7 +39,7 @@ function course_module_instance_list_viewed(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://id.tincanapi.com/verb/viewed',
             'display' => [
-                $lang => 'viewed choice group instances'
+                $lang => 'viewed'
             ],
         ],
         'object' => utils\get_activity\choicegroup_instance_list($config, $event->courseid),

@@ -39,7 +39,7 @@ function choice_removed(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/remove',
             'display' => [
-                $lang => 'removed choice group '
+                $lang => 'removed '
             ],
         ],
         'object' => utils\get_activity\choicegroup($config, $event->contextinstanceid),
