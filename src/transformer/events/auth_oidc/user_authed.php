@@ -38,7 +38,7 @@ function user_authed(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/authenticate',
             'display' => [
-                $lang => 'authenticated using oidc'
+                $lang => 'authenticated'
             ],
         ],
         'object' => utils\get_activity\site($config),
