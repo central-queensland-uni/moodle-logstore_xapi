@@ -39,7 +39,7 @@ function attempt_submitted(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/submit',
             'display' => [
-                $lang => 'submitted H5P attempt'
+                $lang => 'submitted'
             ],
         ],
         'object' => utils\get_activity\hvp($config, $event->contextinstanceid),
