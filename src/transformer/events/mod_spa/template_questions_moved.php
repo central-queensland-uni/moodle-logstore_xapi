@@ -38,7 +38,7 @@ function template_questions_moved(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/update',
             'display' => [
-                $lang => 'moved SPA template questions'
+                $lang => 'moved'
             ],
         ],
         'object' => utils\get_activity\spa_template_questions($config, $event->objectid),

@@ -38,7 +38,7 @@ function group_override_updated(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/update',
             'display' => [
-                $lang => 'updated SPA group override'
+                $lang => 'updated'
             ],
         ],
         'object' => utils\get_activity\spa_group_override($config, $event->objectid),

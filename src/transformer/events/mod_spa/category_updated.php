@@ -38,7 +38,7 @@ function category_updated(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/update',
             'display' => [
-                $lang => 'updated SPA category'
+                $lang => 'updated'
             ],
         ],
         'object' => utils\get_activity\spa_category($config, $event->objectid),

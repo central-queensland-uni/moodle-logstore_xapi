@@ -38,7 +38,7 @@ function user_override_deleted(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/delete',
             'display' => [
-                $lang => 'deleted SPA user override'
+                $lang => 'deleted'
             ],
         ],
         'object' => utils\get_activity\spa_user_override($config, $event->objectid),

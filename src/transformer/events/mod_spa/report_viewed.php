@@ -38,7 +38,7 @@ function report_viewed(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://id.tincanapi.com/verb/viewed',
             'display' => [
-                $lang => 'viewed SPA report'
+                $lang => 'viewed'
             ],
         ],
         'object' => utils\get_activity\spa_report($config, $event->objectinstanceid, $event->other['report']),

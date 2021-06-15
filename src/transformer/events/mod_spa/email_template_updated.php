@@ -42,7 +42,7 @@ function email_template_updated(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/update',
             'display' => [
-                $lang => 'updated SPA email template'
+                $lang => 'updated'
             ],
         ],
         'object' => $object,

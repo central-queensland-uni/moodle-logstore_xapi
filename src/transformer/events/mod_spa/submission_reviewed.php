@@ -38,7 +38,7 @@ function submission_reviewed(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://id.tincanapi.com/verb/reviewed',
             'display' => [
-                $lang => 'reviewed SPA submission'
+                $lang => 'reviewed'
             ],
         ],
         'object' => utils\get_activity\spa_submission($config, $event->contextinstanceid, $event->relateduserid),

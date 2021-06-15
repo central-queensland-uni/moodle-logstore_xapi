@@ -39,7 +39,7 @@ function course_module_viewed(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://id.tincanapi.com/verb/viewed',
             'display' => [
-                $lang => 'viewed SPA'
+                $lang => 'viewed'
             ],
         ],
         'object' => utils\get_activity\spa($config, $event->contextinstanceid),

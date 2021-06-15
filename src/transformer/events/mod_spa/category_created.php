@@ -38,7 +38,7 @@ function category_created(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/create',
             'display' => [
-                $lang => 'created SPA category'
+                $lang => 'created'
             ],
         ],
         'object' => utils\get_activity\spa_category($config, $event->objectid),

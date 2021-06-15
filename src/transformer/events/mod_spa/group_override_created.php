@@ -38,7 +38,7 @@ function group_override_created(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/create',
             'display' => [
-                $lang => 'created SPA group override'
+                $lang => 'created'
             ],
         ],
         'object' => utils\get_activity\spa_group_override($config, $event->objectid),

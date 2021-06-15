@@ -38,7 +38,7 @@ function template_viewed(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://id.tincanapi.com/verb/viewed',
             'display' => [
-                $lang => 'viewed SPA template'
+                $lang => 'viewed'
             ],
         ],
         'object' => utils\get_activity\spa_template($config, $event->objectid),

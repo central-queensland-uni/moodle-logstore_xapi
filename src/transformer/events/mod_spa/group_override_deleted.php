@@ -41,7 +41,7 @@ function group_override_deleted(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/delete',
             'display' => [
-                $lang => 'deleted SPA group override'
+                $lang => 'deleted'
             ],
         ],
         'object' => $object,

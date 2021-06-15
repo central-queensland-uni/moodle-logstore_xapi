@@ -38,7 +38,7 @@ function template_questions_removed(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/remove',
             'display' => [
-                $lang => 'removed SPA template questions'
+                $lang => 'removed'
             ],
         ],
         'object' => utils\get_activity\spa_template_questions($config, $event->objectid),

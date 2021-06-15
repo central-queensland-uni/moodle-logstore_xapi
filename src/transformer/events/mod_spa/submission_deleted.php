@@ -38,7 +38,7 @@ function submission_deleted(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://id.tincanapi.com/verb/delete',
             'display' => [
-                $lang => 'deleted SPA submission'
+                $lang => 'deleted'
             ],
         ],
         'object' => utils\get_activity\spa_submission($config, $event->contextinstanceid, $event->relateduserid),

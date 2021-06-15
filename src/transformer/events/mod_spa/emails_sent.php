@@ -39,7 +39,7 @@ function emails_sent(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/send',
             'display' => [
-                $lang => 'sent SPA emails'
+                $lang => 'sent'
             ],
         ],
         'object' => utils\get_activity\spa($config, $event->contextinstanceid),

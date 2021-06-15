@@ -38,7 +38,7 @@ function user_graded(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://id.tincanapi.com/verb/reviewed',
             'display' => [
-                $lang => 'graded SPA user'
+                $lang => 'graded'
             ],
         ],
         'object' => utils\get_activity\spa_review($config, $event->contextinstanceid, $event->relateduserid),

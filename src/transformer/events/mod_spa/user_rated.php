@@ -38,7 +38,7 @@ function user_rated(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://id.tincanapi.com/verb/rated',
             'display' => [
-                $lang => 'rated SPA user'
+                $lang => 'rated'
             ],
         ],
         'object' => utils\get_activity\spa_review($config, $event->contextinstanceid, $event->relateduserid),

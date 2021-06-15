@@ -38,7 +38,7 @@ function template_deleted(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/delete',
             'display' => [
-                $lang => 'deleted SPA template'
+                $lang => 'deleted'
             ],
         ],
         'object' => utils\get_activity\spa_template($config, $event->objectid),

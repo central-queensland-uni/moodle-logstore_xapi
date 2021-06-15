@@ -38,7 +38,7 @@ function teacher_feedback_created(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/create',
             'display' => [
-                $lang => 'created SPA teacher feedback'
+                $lang => 'created'
             ],
         ],
         'object' => utils\get_activity\spa_teacher_feedback($config, $event->objectid, $event->relateduserid),

@@ -38,7 +38,7 @@ function template_questions_added(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'https://brindlewaye.com/xAPITerms/verbs/added/',
             'display' => [
-                $lang => 'added SPA template questions'
+                $lang => 'added'
             ],
         ],
         'object' => utils\get_activity\spa_template_questions($config, $event->objectid),

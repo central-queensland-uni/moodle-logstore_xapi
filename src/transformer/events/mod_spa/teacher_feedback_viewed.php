@@ -38,7 +38,7 @@ function teacher_feedback_viewed(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://id.tincanapi.com/verb/viewed',
             'display' => [
-                $lang => 'viewed SPA teacher feedback'
+                $lang => 'viewed'
             ],
         ],
         'object' => utils\get_activity\spa_teacher_feedback($config, $event->objectid, $event->relateduserid),

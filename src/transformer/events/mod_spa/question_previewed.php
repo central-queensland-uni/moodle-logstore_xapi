@@ -38,7 +38,7 @@ function question_previewed(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://id.tincanapi.com/verb/previewed',
             'display' => [
-                $lang => 'previewed SPA question'
+                $lang => 'previewed'
             ],
         ],
         'object' => utils\get_activity\spa_question($config, $event->objectid),

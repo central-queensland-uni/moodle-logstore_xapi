@@ -38,7 +38,7 @@ function submission_created(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/create',
             'display' => [
-                $lang => 'created SPA submission'
+                $lang => 'created'
             ],
         ],
         'object' => utils\get_activity\spa_submission($config, $event->contextinstanceid, $event->relateduserid),

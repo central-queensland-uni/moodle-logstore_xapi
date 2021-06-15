@@ -38,7 +38,7 @@ function teacher_feedback_updated(array $config, \stdClass $event) {
         'verb' => [
             'id' => 'http://activitystrea.ms/schema/1.0/update',
             'display' => [
-                $lang => 'updated SPA teacher feedback'
+                $lang => 'updated'
             ],
         ],
         'object' => utils\get_activity\spa_teacher_feedback($config, $event->objectid, $event->relateduserid),
