@@ -21,7 +21,7 @@ function source(array $config) {
     return [
         'id' => $config['source_url'],
         'definition' => [
-            'type' => 'http://id.tincanapi.com/activitytype/source',
+            'type' => 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/source.json',
             'name' => [
                 $config['source_lang'] => $config['source_name'],
             ],

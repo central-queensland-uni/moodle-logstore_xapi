@@ -24,6 +24,6 @@ function course_forum(array $config, \stdClass $course, $cmid) {
         $config,
         $course,
         $cmid,
-        'http://id.tincanapi.com/activitytype/forum-topic'
+        'https://assets.adc.cqu.edu.au/live/xapi/activitytype/forum-topic.json'
     );
 }

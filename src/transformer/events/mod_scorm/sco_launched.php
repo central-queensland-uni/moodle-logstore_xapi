@@ -31,7 +31,7 @@ function sco_launched(array $config, \stdClass $event) {
     return [[
         'actor' => utils\get_user($config, $user),
         'verb' => [
-            'id' => 'http://adlnet.gov/expapi/verbs/launched',
+            'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/launched.json',
             'display' => [
                 $lang => 'launched'
             ],

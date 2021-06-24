@@ -56,7 +56,7 @@ function item_created(array $config, \stdClass $event) {
                         $config,
                         $course,
                         $event->contextinstanceid,
-                        'http://id.tincanapi.com/activitytype/survey')
+                        'https://assets.adc.cqu.edu.au/live/xapi/activitytype/survey.json')
                 ],
                 'category' => [
                     utils\get_activity\source($config),

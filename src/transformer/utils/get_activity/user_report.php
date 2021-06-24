@@ -23,7 +23,7 @@ function user_report(array $config, \stdClass $user, \stdClass $course, $coursel
 
     $activity = [
         'definition' => [
-            'type' => 'http://id.tincanapi.com/activitytype/user-profile',
+            'type' => 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/user-profile.json',
             'name' => [
                 $courselang => 'forum posts of '.utils\get_full_name($user),
             ],

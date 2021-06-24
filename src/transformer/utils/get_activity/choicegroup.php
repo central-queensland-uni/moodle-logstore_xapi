@@ -29,7 +29,7 @@ use src\transformer\utils as utils;
 function choicegroup(array $config, $cmid) {
     $lang = $config['source_lang'];
     $repo = $config['repo'];
-    $xapitype = 'http://activitystrea.ms/schema/1.0/question';
+    $xapitype = 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/question.json';
 
     $coursemodule = $repo->read_record_by_id('course_modules', $cmid);
     $module = $repo->read_record_by_id('modules', $coursemodule->module);
@@ -94,7 +94,7 @@ function choicegroup_report(array $config, $cmid)
 {
     $lang = $config['source_lang'];
     $repo = $config['repo'];
-    $xapitype = 'http://activitystrea.ms/schema/1.0/page';
+    $xapitype = 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/page.json';
 
     $coursemodule = $repo->read_record_by_id('course_modules', $cmid);
     $module = $repo->read_record_by_id('modules', $coursemodule->module);

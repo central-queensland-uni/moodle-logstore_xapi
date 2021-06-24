@@ -36,7 +36,7 @@ function submission_deleted(array $config, \stdClass $event) {
     return [[
         'actor' => utils\get_user($config, $user),
         'verb' => [
-            'id' => 'http://id.tincanapi.com/verb/delete',
+            'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/deleted.json',
             'display' => [
                 $lang => 'deleted'
             ],

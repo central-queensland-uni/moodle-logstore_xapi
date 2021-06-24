@@ -28,21 +28,21 @@ function get_scorm_verb($scormscoestracks, $lang) {
     switch ($scormstatus) {
         case 'failed':
             return [
-                'id' => 'http://adlnet.gov/expapi/verbs/failed',
+                'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/failed.json',
                 'display' => [
                     $lang => 'failed'
                 ],
             ];
         case 'passed':
             return [
-                'id' => 'http://adlnet.gov/expapi/verbs/passed',
+                'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/passed.json',
                 'display' => [
                     $lang => 'passed'
                 ],
             ];
         default:
             return [
-                'id' => 'http://adlnet.gov/expapi/verbs/completed',
+                'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/completed.json',
                 'display' => [
                     $lang => 'completed'
                 ],

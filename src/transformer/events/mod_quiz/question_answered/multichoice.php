@@ -31,7 +31,7 @@ function multichoice(array $config, \stdClass $event, \stdClass $questionattempt
     return [[
         'actor' => utils\get_user($config, $user),
         'verb' => [
-            'id' => 'http://adlnet.gov/expapi/verbs/answered',
+            'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/answered.json',
             'display' => [
                 $lang => 'answered'
             ],
@@ -46,7 +46,7 @@ function multichoice(array $config, \stdClass $event, \stdClass $questionattempt
             'success' => $questionattempt->rightanswer == $questionattempt->responsesummary,
             'completion' => $questionattempt->responsesummary !== '',
             'extensions' => [
-                'http://learninglocker.net/xapi/cmi/choice/response' =>
+                'https://assets.adc.cqu.edu.au/live/xapi/verb/responded.json' =>
                     utils\get_string_html_removed($questionattempt->responsesummary),
             ],
         ],

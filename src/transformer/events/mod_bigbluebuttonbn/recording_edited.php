@@ -28,5 +28,5 @@ use function src\transformer\events\mod_bigbluebuttonbn\create_stmt;
  */
 function recording_edited(array $config, \stdClass $event) {
 
-    return create_stmt( $config, $event, 'https://w3id.org/xapi/dod-isd/verbs/edited', 'edited' );
+    return create_stmt( $config, $event, 'https://assets.adc.cqu.edu.au/live/xapi/verb/updated.json', 'edited' );
 }

@@ -30,7 +30,7 @@ function chapter_viewed(array $config, \stdClass $event) {
     $statement = [
         'actor' => utils\get_user($config, $user),
         'verb' => [
-            'id' => 'http://id.tincanapi.com/verb/viewed',
+            'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/viewed.json',
             'display' => [
                 $lang => 'viewed'
             ]
@@ -49,7 +49,7 @@ function chapter_viewed(array $config, \stdClass $event) {
                         $config,
                         $course,
                         $event->contextinstanceid,
-                        'http://id.tincanapi.com/activitytype/book'
+                        'https://assets.adc.cqu.edu.au/live/xapi/activitytype/book.json'
                     )
                 ],
                 'category' => [

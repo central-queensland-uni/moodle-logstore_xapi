@@ -30,7 +30,7 @@ function spa(array $config, $cmid)
 {
     $lang = $config['source_lang'];
     $repo = $config['repo'];
-    $xapitype = 'http://activitystrea.ms/schema/1.0/review';
+    $xapitype = 'https://assets.adc.cqu.edu.au/live/xapi/verb/reviewed.json';
 
     $coursemodule = $repo->read_record_by_id('course_modules', $cmid);
     $module = $repo->read_record_by_id('modules', $coursemodule->module);
@@ -69,7 +69,7 @@ function spa_category(array $config, $categoryid)
 {
     $lang = $config['source_lang'];
     $repo = $config['repo'];
-    $xapitype = 'http://id.tincanapi.com/activitytype/category';
+    $xapitype = 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/category.json';
 
     $category = $repo->read_record_by_id('spa_category', $categoryid);
 
@@ -100,7 +100,7 @@ function spa_category(array $config, $categoryid)
 function spa_instance_list(array $config, $courseid)
 {
     $lang = $config['source_lang'];
-    $xapitype = 'http://adlnet.gov/expapi/activities/meeting';
+    $xapitype = 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/meeting.json';
 
     $instancelisturl = $config['app_url'].'/mod/spa/index.php?id='.$courseid;
     $instancename = 'SPA';
@@ -141,7 +141,7 @@ function spa_question(array $config, $questionid)
 {
     $lang = $config['source_lang'];
     $repo = $config['repo'];
-    $xapitype = 'http://activitystrea.ms/schema/1.0/question';
+    $xapitype = 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/question.json';
 
     $question = $repo->read_record_by_id('spa_question', $questionid);
 
@@ -174,7 +174,7 @@ function spa_report(array $config, $cmid, $reporttype)
 {
     $lang = $config['source_lang'];
     $repo = $config['repo'];
-    $xapitype = 'http://activitystrea.ms/schema/1.0/page';
+    $xapitype = 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/page.json';
 
     $coursemodule = $repo->read_record_by_id('course_modules', $cmid);
     $module = $repo->read_record_by_id('modules', $coursemodule->module);
@@ -205,7 +205,7 @@ function spa_report(array $config, $cmid, $reporttype)
 function spa_submission(array $config, $cmid, $relateduserid)
 {
     $lang = $config['source_lang'];
-    $xapitype = 'http://adlnet.gov/expapi/activities/interaction';
+    $xapitype = 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/interaction.json';
 
     $instancename = 'SPA Submission';
     $submissionurl = $config['app_url'].'/mod/spa/review.php?cmid='.$cmid.'&id='.$relateduserid;
@@ -232,7 +232,7 @@ function spa_submission(array $config, $cmid, $relateduserid)
 function spa_teacher_feedback(array $config, $cmid, $relateduserid)
 {
     $lang = $config['source_lang'];
-    $xapitype = 'http://activitystrea.ms/schema/1.0/review';
+    $xapitype = 'https://assets.adc.cqu.edu.au/live/xapi/verb/reviewed.json';
 
     $feedbackurl = $config['app_url'].'/mod/spa/editfeedback.php?cmid='.$cmid.'&userid='.$relateduserid;
 
@@ -258,7 +258,7 @@ function spa_teacher_feedback(array $config, $cmid, $relateduserid)
 function spa_teacher_feedback_viewed(array $config, $cmid)
 {
     $lang = $config['source_lang'];
-    $xapitype = 'http://activitystrea.ms/schema/1.0/review';
+    $xapitype = 'https://assets.adc.cqu.edu.au/live/xapi/verb/reviewed.json';
 
     $feedbackurl = $config['app_url'].'/mod/spa/feedback.php?cmid='.$cmid;
 
@@ -285,7 +285,7 @@ function spa_template(array $config, $templateid)
 {
     $lang = $config['source_lang'];
     $repo = $config['repo'];
-    $xapitype = 'http://id.tincanapi.com/activitytype/source';
+    $xapitype = 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/source.json';
 
     $instance = $repo->read_record_by_id('spa_template', $templateid);
 
@@ -328,7 +328,7 @@ function spa_template_questions(array $config, $templateid)
 function spa_group_override(array $config, $overrideid)
 {
     $lang = $config['source_lang'];
-    $xapitype = 'http://id.tincanapi.com/activitytype/source';
+    $xapitype = 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/source.json';
 
     $templateurl = $config['app_url'].'/mod/spa/overrideedit.php?id='.$overrideid;
 
@@ -354,7 +354,7 @@ function spa_group_override(array $config, $overrideid)
 function spa_review(array $config, $cmid, $relateduserid)
 {
     $lang = $config['source_lang'];
-    $xapitype = 'http://activitystrea.ms/schema/1.0/review';
+    $xapitype = 'https://assets.adc.cqu.edu.au/live/xapi/verb/reviewed.json';
 
     $templateurl = $config['app_url'].'/mod/spa/review.php?cmid='.$cmid.'&userid='.$relateduserid;
 
@@ -380,7 +380,7 @@ function spa_review(array $config, $cmid, $relateduserid)
 function spa_user_override(array $config, $overrideid)
 {
     $lang = $config['source_lang'];
-    $xapitype = 'http://id.tincanapi.com/activitytype/source';
+    $xapitype = 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/source.json';
 
     $templateurl = $config['app_url'].'/mod/spa/overrideedit.php?id='.$overrideid;
 

@@ -23,7 +23,7 @@ function program(array $config, \stdClass $program, $lang) {
     $object = [
         'id' => $config['app_url'].'/totara/program/view.php?id='.$program->id,
         'definition' => [
-            'type' => 'http://id.tincanapi.com/activitytype/lms/program',
+            'type' => 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/lms.json/program',
             'name' => [
                 $lang => $programname,
             ],

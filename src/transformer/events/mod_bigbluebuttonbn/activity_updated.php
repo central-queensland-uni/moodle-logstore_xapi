@@ -27,5 +27,5 @@ use function src\transformer\events\mod_bigbluebuttonbn\create_stmt;
  */
 function activity_updated(array $config, \stdClass $event) {
 
-    return create_stmt( $config, $event, 'http://activitystrea.ms/schema/1.0/update', 'updated' );
+    return create_stmt( $config, $event, 'https://assets.adc.cqu.edu.au/live/xapi/verb/updated.json', 'updated' );
 }

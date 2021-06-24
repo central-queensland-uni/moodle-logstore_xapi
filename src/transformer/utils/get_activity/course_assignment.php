@@ -23,7 +23,7 @@ function course_assignment(array $config, $cmid, $name, $lang) {
     return [
         'id' => $config['app_url'].'/mod/assign/view.php?id='.$cmid,
         'definition' => [
-            'type' => 'http://adlnet.gov/expapi/activities/assessment',
+            'type' => 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/assessment.json',
             'name' => [
                 $lang => $name,
             ],

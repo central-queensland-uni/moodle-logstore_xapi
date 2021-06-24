@@ -27,7 +27,7 @@ function course_discussion(array $config, \stdClass $course, \stdClass $discussi
     return [
         'id' => $discussionurl,
         'definition' => [
-            'type' => 'http://id.tincanapi.com/activitytype/discussion',
+            'type' => 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/discussion.json',
             'name' => [
                 $courselang => $discussionname,
             ],

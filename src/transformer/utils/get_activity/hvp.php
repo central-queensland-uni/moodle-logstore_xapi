@@ -29,7 +29,7 @@ use src\transformer\utils as utils;
 function hvp(array $config, $cmid) {
     $lang = $config['source_lang'];
     $repo = $config['repo'];
-    $xapitype = 'http://adlnet.gov/expapi/activities/module';
+    $xapitype = 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/assessment.json';
 
     $coursemodule = $repo->read_record_by_id('course_modules', $cmid);
     $module = $repo->read_record_by_id('modules', $coursemodule->module);
@@ -67,7 +67,7 @@ function hvp(array $config, $cmid) {
 function hvp_instance_list(array $config, $courseid)
 {
     $lang = $config['source_lang'];
-    $xapitype = 'http://adlnet.gov/expapi/activities/module';
+    $xapitype = 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/assessment.json';
 
     $instancelisturl = $config['app_url'].'/mod/hvp/index.php?id='.$courseid;
     $instancename = 'H5P';

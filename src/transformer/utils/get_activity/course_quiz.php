@@ -24,6 +24,6 @@ function course_quiz(array $config, \stdClass $course, $cmid) {
         $config,
         $course,
         $cmid,
-        'http://adlnet.gov/expapi/activities/assessment'
+        'https://assets.adc.cqu.edu.au/live/xapi/activitytype/assessment.json'
     );
 }

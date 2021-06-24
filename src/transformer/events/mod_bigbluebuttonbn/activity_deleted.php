@@ -27,5 +27,5 @@ use function src\transformer\events\mod_bigbluebuttonbn\create_stmt;
  */
 function activity_deleted(array $config, \stdClass $event) {
 
-    return create_stmt( $config, $event, 'http://activitystrea.ms/schema/1.0/delete', 'deleted' );
+    return create_stmt( $config, $event, 'https://assets.adc.cqu.edu.au/live/xapi/verb/deleted.json', 'deleted' );
 }

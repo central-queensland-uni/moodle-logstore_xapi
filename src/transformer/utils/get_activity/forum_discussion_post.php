@@ -25,7 +25,7 @@ function forum_discussion_post(array $config, $discussionid, \stdClass $post) {
     return [
         'id' => $posturl,
         'definition' => [
-            'type' => 'http://id.tincanapi.com/activitytype/forum-reply',
+            'type' => 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/forum-reply.json',
         ],
     ];
 }

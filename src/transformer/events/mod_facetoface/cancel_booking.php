@@ -29,7 +29,7 @@ function cancel_booking(array $config, \stdClass $event) {
     return [[
         'actor' => utils\get_user($config, $user),
         'verb' => [
-            'id' => 'http://id.tincanapi.com/verb/unregistered',
+            'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/unregistered.json',
             'display' => [
                 $lang => 'unregistered from'
             ],

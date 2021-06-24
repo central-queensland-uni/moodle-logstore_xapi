@@ -43,7 +43,7 @@ function match(array $config, \stdClass $event, \stdClass $questionattempt, \std
     return [[
         'actor' => utils\get_user($config, $user),
         'verb' => [
-            'id' => 'http://adlnet.gov/expapi/verbs/answered',
+            'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/answered.json',
             'display' => [
                 $lang => 'answered'
             ],

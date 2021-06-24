@@ -29,7 +29,7 @@ function course_module_viewed(array $config, \stdClass $event) {
     return [[
         'actor' => utils\get_user($config, $user),
         'verb' => [
-            'id' => 'http://id.tincanapi.com/verb/viewed',
+            'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/viewed.json',
             'display' => [
                 $lang => 'viewed'
             ],
@@ -38,7 +38,7 @@ function course_module_viewed(array $config, \stdClass $event) {
             $config,
             $course,
             $event->contextinstanceid,
-            'https://w3id.org/xapi/acrossx/activities/page'
+            'https://assets.adc.cqu.edu.au/live/xapi/activitytype/page.json'
         ),
         'timestamp' => utils\get_event_timestamp($event),
         'context' => [

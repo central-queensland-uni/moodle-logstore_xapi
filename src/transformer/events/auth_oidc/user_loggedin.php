@@ -36,7 +36,7 @@ function user_loggedin(array $config, \stdClass $event) {
     return [[
         'actor' => utils\get_user($config, $user),
         'verb' => [
-            'id' => 'https://brindlewaye.com/xAPITerms/verbs/loggedin/',
+            'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/logged-in.json',
             'display' => [
                 $lang => 'logged into'
             ],

@@ -37,7 +37,7 @@ function comment_approved(array $config, \stdClass $event) {
     return[[
         'actor' => utils\get_user($config, $user),
         'verb' => [
-            'id' => 'http://activitystrea.ms/schema/1.0/approve',
+            'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/approved.json',
             'display' => [
                 $lang => 'approved'
             ],

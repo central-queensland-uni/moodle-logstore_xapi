@@ -28,7 +28,7 @@ function site(array $config) {
     return [
         'id' => $config['app_url'],
         'definition' => [
-            'type' => 'http://id.tincanapi.com/activitytype/lms',
+            'type' => 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/lms.json',
             'name' => [
                 $sitelang => $sitename,
             ],

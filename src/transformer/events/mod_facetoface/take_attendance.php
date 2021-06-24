@@ -41,7 +41,7 @@ function take_attendance(array $config, \stdClass $event) {
                 $statement = [
                     'actor' => utils\get_user($config, $attendee),
                     'verb' => [
-                        'id' => 'http://adlnet.gov/expapi/verbs/attended',
+                        'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/attended.json',
                         'display' => [
                             $lang => 'attended'
                         ],

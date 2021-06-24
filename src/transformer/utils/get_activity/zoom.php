@@ -29,7 +29,7 @@ use src\transformer\utils as utils;
 function zoom(array $config, $cmid) {
     $lang = $config['source_lang'];
     $repo = $config['repo'];
-    $xapitype = 'http://adlnet.gov/expapi/activities/meeting';
+    $xapitype = 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/meeting.json';
 
     $coursemodule = $repo->read_record_by_id('course_modules', $cmid);
     $module = $repo->read_record_by_id('modules', $coursemodule->module);
@@ -67,7 +67,7 @@ function zoom(array $config, $cmid) {
 function zoom_instance_list(array $config, $courseid)
 {
     $lang = $config['source_lang'];
-    $xapitype = 'http://adlnet.gov/expapi/activities/meeting';
+    $xapitype = 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/meeting.json';
 
     $instancelisturl = $config['app_url'].'/mod/zoom/index.php?id='.$courseid;
     $instancename = 'Zoom';

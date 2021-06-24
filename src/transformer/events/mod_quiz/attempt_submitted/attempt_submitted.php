@@ -40,7 +40,7 @@ function attempt_submitted(array $config, \stdClass $event) {
     return [[
         'actor' => utils\get_user($config, $user),
         'verb' => [
-            'id' => 'http://adlnet.gov/expapi/verbs/completed',
+            'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/completed.json',
             'display' => [
                 $lang => 'completed'
             ],

@@ -28,9 +28,9 @@ function user_loggedout(array $config, \stdClass $event) {
     return [[
         'actor' => utils\get_user($config, $user),
         'verb' => [
-            'id' => 'https://brindlewaye.com/xAPITerms/verbs/loggedout/',
+            'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/logged-out.json',
             'display' => [
-                $lang => 'logged out of'
+                $lang => 'logged out'
             ],
         ],
         'object' => utils\get_activity\site($config),

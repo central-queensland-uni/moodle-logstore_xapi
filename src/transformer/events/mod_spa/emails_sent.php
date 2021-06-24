@@ -37,7 +37,7 @@ function emails_sent(array $config, \stdClass $event) {
     return [[
         'actor' => utils\get_user($config, $user),
         'verb' => [
-            'id' => 'http://activitystrea.ms/schema/1.0/send',
+            'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/sent.json',
             'display' => [
                 $lang => 'sent'
             ],

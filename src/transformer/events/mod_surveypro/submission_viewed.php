@@ -37,7 +37,7 @@ function submission_viewed(array $config, \stdClass $event) {
     return [[
         'actor' => utils\get_user($config, $user),
         'verb' => [
-            'id' => 'http://id.tincanapi.com/verb/viewed',
+            'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/viewed.json',
             'display' => [
                 $lang => 'viewed'
             ],
@@ -56,7 +56,7 @@ function submission_viewed(array $config, \stdClass $event) {
                         $config,
                         $course,
                         $event->contextinstanceid,
-                        'http://id.tincanapi.com/activitytype/survey')
+                        'https://assets.adc.cqu.edu.au/live/xapi/activitytype/survey.json')
                 ],
                 'category' => [
                     utils\get_activity\source($config),

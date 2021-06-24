@@ -24,7 +24,7 @@ function book_chapter(array $config, \stdClass $course, \stdClass $chapter, $cmi
     $url = $config['app_url'].'/mod/book/view.php?id=' . $cmid . '&chapterid=' . $chapter->id;
 
     $definition = [
-        'type' => 'http://id.tincanapi.com/activitytype/chapter'
+        'type' => 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/chapter.json'
     ];
 
     if (property_exists($chapter, 'title')) {

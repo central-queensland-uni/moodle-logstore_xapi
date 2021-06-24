@@ -27,5 +27,5 @@ use function src\transformer\events\mod_bigbluebuttonbn\create_stmt;
  */
 function meeting_joined(array $config, \stdClass $event) {
 
-    return create_stmt( $config, $event, 'http://activitystrea.ms/schema/1.0/join', 'joined' );
+    return create_stmt( $config, $event, 'https://assets.adc.cqu.edu.au/live/xapi/verb/joined.json', 'joined' );
 }

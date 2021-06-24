@@ -26,7 +26,7 @@ function course(array $config, \stdClass $course) {
     $object = [
                   'id' => $config['app_url'].'/course/view.php?id='.$course->id,
                   'definition' => [
-                      'type' => 'http://id.tincanapi.com/activitytype/lms/course',
+                      'type' => 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/course.json',
                       'name' => [
                           $courselang => $coursename,
                       ],

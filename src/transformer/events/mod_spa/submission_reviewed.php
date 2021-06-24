@@ -36,7 +36,7 @@ function submission_reviewed(array $config, \stdClass $event) {
     return [[
         'actor' => utils\get_user($config, $user),
         'verb' => [
-            'id' => 'http://id.tincanapi.com/verb/reviewed',
+            'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/reviewed.json',
             'display' => [
                 $lang => 'reviewed'
             ],

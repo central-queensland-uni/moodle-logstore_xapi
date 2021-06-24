@@ -36,7 +36,7 @@ function template_previewed(array $config, \stdClass $event) {
     return [[
         'actor' => utils\get_user($config, $user),
         'verb' => [
-            'id' => 'http://id.tincanapi.com/verb/previewed',
+            'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/previewed.json',
             'display' => [
                 $lang => 'previewed'
             ],

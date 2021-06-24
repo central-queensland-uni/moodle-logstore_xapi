@@ -30,7 +30,7 @@ function oublog(array $config, $cmid)
 {
     $lang = $config['source_lang'];
     $repo = $config['repo'];
-    $xapitype = 'http://id.tincanapi.com/activitytype/blog';
+    $xapitype = 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/blog.json';
 
     $coursemodule = $repo->read_record_by_id('course_modules', $cmid);
     $module = $repo->read_record_by_id('modules', $coursemodule->module);
@@ -70,7 +70,7 @@ function oublog_comment(array $config, $commentid, $postid)
 {
     $lang = $config['source_lang'];
     $repo = $config['repo'];
-    $xapitype = 'http://activitystrea.ms/schema/1.0/comment';
+    $xapitype = 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/comment.json';
 
     $instance = $repo->read_by_record_id('oublog_comments', $commentid);
 
@@ -105,7 +105,7 @@ function oublog_comment(array $config, $commentid, $postid)
 function oublog_instance_list(array $config, $courseid)
 {
     $lang = $config['source_lang'];
-    $xapitype = 'http://id.tincanapi.com/activitytype/blog';
+    $xapitype = 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/blog.json';
 
     $instancelisturl = $config['app_url'].'/mod/oublog/index.php?id='.$courseid;
     $instancename = 'oublog';
@@ -147,7 +147,7 @@ function oublog_post(array $config, $postid)
 {
     $lang = $config['source_lang'];
     $repo = $config['repo'];
-    $xapitype = 'http://activitystrea.ms/schema/1.0/article';
+    $xapitype = 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/article.json';
 
     $instance = $repo->read_by_record_id('oublog_posts', $postid);
 
@@ -175,7 +175,7 @@ function oublog_post(array $config, $postid)
 function oublog_site_entries(array $config, $pageid)
 {
     $lang = $config['source_lang'];
-    $xapitype = 'http://activitystrea.ms/schema/1.0/page';
+    $xapitype = 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/page.json';
 
     $instancelisturl = $config['app_url'].'/mod/oublog/allposts.php?pageid='.$pageid;
     $instancename = 'oublog site entries';

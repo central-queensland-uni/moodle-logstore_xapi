@@ -42,7 +42,7 @@ function multichoicerated(array $config, \stdClass $event, \stdClass $feedbackva
     return [[
         'actor' => utils\get_user($config, $user),
         'verb' => [
-            'id' => 'http://adlnet.gov/expapi/verbs/answered',
+            'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/answered.json',
             'display' => [
                 $lang => 'answered'
             ],
@@ -63,7 +63,7 @@ function multichoicerated(array $config, \stdClass $event, \stdClass $feedbackva
             'completion' => $feedbackvalue->value !== '',
             'extensions' => [
                 'http://learninglocker.net/xapi/moodle/feedback_item_rating' => $selectedchoice->rating,
-                'http://learninglocker.net/xapi/cmi/choice/response' => $selectedchoice->name,
+                'https://assets.adc.cqu.edu.au/live/xapi/verb/responded.json' => $selectedchoice->name,
             ],
         ],
         'context' => [

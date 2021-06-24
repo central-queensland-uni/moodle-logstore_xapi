@@ -50,7 +50,7 @@ function create_stmt(array $config, \stdClass $event, $evtid, $evtdispname ) {
             $config,
             $course,
             $event->contextinstanceid,
-            'http://adlnet.gov/expapi/activities/link'
+            'https://assets.adc.cqu.edu.au/live/xapi/activitytype/link.json'
         ),
         'timestamp' => utils\get_event_timestamp($event),
         'context' => [

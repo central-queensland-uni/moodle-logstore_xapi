@@ -25,7 +25,7 @@ function quiz_attempt(array $config, $attemptid, $cmid) {
     return [
         'id' => $config['app_url'].'/mod/quiz/attempt.php?attempt='.$attemptid.'&cmid='.$cmid,
         'definition' => [
-            'type' => 'http://adlnet.gov/expapi/activities/attempt',
+            'type' => 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/attempt.json',
             'name' => [
                 $lang => 'Attempt',
             ],

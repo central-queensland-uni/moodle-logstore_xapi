@@ -39,7 +39,7 @@ function group_override_deleted(array $config, \stdClass $event) {
     return [[
         'actor' => utils\get_user($config, $user),
         'verb' => [
-            'id' => 'http://activitystrea.ms/schema/1.0/delete',
+            'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/deleted.json',
             'display' => [
                 $lang => 'deleted'
             ],

@@ -28,5 +28,5 @@ use function src\transformer\events\mod_bigbluebuttonbn\create_stmt;
 
 function recording_imported(array $config, \stdClass $event) {
 
-    return create_stmt( $config, $event, 'http://adlnet.gov/expapi/verbs/imported', 'imported' );
+    return create_stmt( $config, $event, 'https://assets.adc.cqu.edu.au/live/xapi/verb/imported.json', 'imported' );
 }

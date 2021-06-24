@@ -25,7 +25,7 @@ function course_scorm(array $config, $cmid, $scorm, $lang) {
     return [
         'id' => $config['app_url'].'/mod/scorm/view.php?id='.$cmid,
         'definition' => [
-            'type' => 'http://id.tincanapi.com/activitytype/legacy-learning-standard',
+            'type' => 'https://assets.adc.cqu.edu.au/live/xapi/activitytype/legacy-learning-standard.json',
             'name' => [
                 $lang => $scormname,
             ],

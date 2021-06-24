@@ -58,7 +58,7 @@ function assignment_graded(array $config, \stdClass $event) {
     $statement = [
         'actor' => utils\get_user($config, $user),
         'verb' => [
-            'id' => 'http://adlnet.gov/expapi/verbs/scored',
+            'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/scored.json',
             'display' => [
                 $lang => 'attained grade for'
             ],

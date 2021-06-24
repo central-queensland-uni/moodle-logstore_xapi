@@ -37,7 +37,7 @@ function join_meeting_button_clicked(array $config, \stdClass $event) {
     return [[
         'actor' => utils\get_user($config, $user),
         'verb' => [
-            'id' => 'http://activitystrea.ms/schema/1.0/join',
+            'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/joined.json',
             'display' => [
                 $lang => 'joined'
             ],

@@ -37,7 +37,7 @@ function post_imported(array $config, \stdClass $event) {
     return[[
         'actor' => utils\get_user($config, $user),
         'verb' => [
-            'id' => 'http://adlnet.gov/expapi/verbs/imported',
+            'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/imported.json',
             'display' => [
                 $lang => 'imported'
             ],

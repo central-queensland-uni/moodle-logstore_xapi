@@ -34,7 +34,7 @@ function post_created(array $config, \stdClass $event) {
     return[[
         'actor' => utils\get_user($config, $user),
         'verb' => [
-            'id' => 'http://id.tincanapi.com/verb/replied',
+            'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/replied.json',
             'display' => [
                 $lang => 'replied to'
             ],

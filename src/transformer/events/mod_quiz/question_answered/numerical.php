@@ -32,7 +32,7 @@ function numerical(array $config, \stdClass $event, \stdClass $questionattempt, 
     return [[
         'actor' => utils\get_user($config, $user),
         'verb' => [
-            'id' => 'http://adlnet.gov/expapi/verbs/answered',
+            'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/answered.json',
             'display' => [
                 $lang => 'answered'
             ],

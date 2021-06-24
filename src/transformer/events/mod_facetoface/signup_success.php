@@ -29,7 +29,7 @@ function signup_success(array $config, \stdClass $event) {
     return [[
         'actor' => utils\get_user($config, $user),
         'verb' => [
-            'id' => 'http://adlnet.gov/expapi/verbs/registered',
+            'id' => 'https://assets.adc.cqu.edu.au/live/xapi/verb/registered.json',
             'display' => [
                 $lang => 'registered to'
             ],
