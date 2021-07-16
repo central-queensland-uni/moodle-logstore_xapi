@@ -57,6 +57,16 @@ class store extends php_obj implements log_writer {
             return true;
         }
 
+        // Ignore events from excluded users.
+        $excludeusers = get_config('logstore_xapi', 'excludeusers');
+
+        if (!empty($excludeusers)) {
+            $excludeduserids = array_filter(explode(',', $excludeusers));
+            if (in_array($event->userid, $excludeduserids)) {
+                return true;
+            }
+        }
+
         $enabledevents = explode(',', $this->get_config('routes', ''));
         $isdisabledevent = !in_array($event->eventname, $enabledevents);
         return $isdisabledevent;
