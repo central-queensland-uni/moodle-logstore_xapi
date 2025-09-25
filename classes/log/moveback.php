@@ -71,6 +71,13 @@ class moveback {
     protected $params = array();
 
     /**
+     * The type of the moved event.
+     *
+     * @var int
+     */
+    protected $type;
+
+    /**
      * Standard constructor for class.
      *
      * @param array $eventids event ids
