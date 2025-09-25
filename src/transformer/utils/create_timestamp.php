@@ -27,8 +27,6 @@
 namespace src\transformer\utils;
 defined('MOODLE_INTERNAL') || die();
 
-date_default_timezone_set('Europe/London');
-
 /**
  * Transformer utility to create standard timestamp.
  *
