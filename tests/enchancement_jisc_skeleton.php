@@ -186,7 +186,7 @@ abstract class enchancement_jisc_skeleton extends \advanced_testcase {
             if ($key == 'id') {
                 continue;
             }
-            $this->assertObjectHasAttribute($key, $data);
+            $this->assertObjectHasProperty($key, $data);
 
             if ($key == 'eventnames') {
                 $this->assertIsArray($value);

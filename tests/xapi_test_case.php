@@ -162,6 +162,10 @@ abstract class xapi_test_case extends \advanced_testcase {
      * @return void
      */
     private function assert_valid_xapi_statement(array $statement) {
+        if (!class_exists(LockerStatement::class)) {
+            $this->markTestSkipped('Locker\XApi\Statement class does not exist. Install via composer with dev dependencies.');
+            return;
+        }
         $errors = LockerStatement::createFromJson(json_encode($statement))->validate();
         $errorsjson = json_encode(array_map(function ($error) {
             return (string) $error;
